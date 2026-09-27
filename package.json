@@ -1,0 +1,27 @@
+{
+  "name": "obsidian-mermaid-navigate",
+  "version": "1.1.0",
+  "description": "Touch-friendly navigation and safe source-code editing for Mermaid diagrams in Obsidian.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc --noEmit && node esbuild.config.mjs production",
+    "test": "vitest run",
+    "test:browser": "playwright test",
+    "test:obsidian": "node scripts/test-desktop-editing.mjs",
+    "check": "npm run build && npm test && npm run test:browser",
+    "package": "npm run build && node scripts/package.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@codemirror/view": "6.38.6",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.25.5",
+    "jsdom": "^26.1.0",
+    "obsidian": "latest",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+main.js
+*.js.map
+dist/
+test-results/
+playwright-report/
+artifacts/
+.pi/
+.env
+.env.*
+.DS_Store
